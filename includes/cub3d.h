@@ -60,7 +60,6 @@ typedef struct  s_key
 	int			w;
 	int			s;
 	int			d;
-	int			esc;
 }               t_key;
 
 
@@ -131,9 +130,15 @@ void    draw(t_info *info);
 
 int 	window_init(t_info *info);
 void	info_init(t_info *info);
-void    tex_free(t_info *info, int i);
+void	key_init(t_info *info);
 int     tex_init(t_info *info);
 void	game_init(t_info *info);
+
+/*
+** close.c
+*/
+
+void    tex_free(t_info *info, int i);
 
 /*
 ** wall1.c
@@ -171,7 +176,7 @@ void    load_texture(t_info *info);
 ** sprite.c
 */
 
-void    clac_sprite(t_info *info);
+void    calc_sprite(t_info *info);
 
 /*
 ** key_handling.c

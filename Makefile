@@ -8,7 +8,7 @@ INCS		= -I $(INC_PATH)
 SRCS		= $(addprefix $(SRC_PATH)/, $(SRC_LIST))
 OBJS		= $(SRCS:.c=.o)
 
-SRC_LIST	= main.c init.c key_handling.c wall1.c wall2.c \
+SRC_LIST	= main.c init.c close.c key_handling.c wall1.c wall2.c \
 			  texture.c floor.c sprite.c
 
 CC			= gcc
