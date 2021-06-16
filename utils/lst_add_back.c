@@ -1,5 +1,4 @@
 #include "utils.h"
-#include <stdio.h>
 
 t_list	*lst_add_back(t_list **lst, char *line)
 {
@@ -28,9 +27,10 @@ int		lst_clear(t_list **lst)
 
 	while (*lst)
 	{
-		tmp = (*lst)->next;
-		free((*lst)->content);
-		*lst = tmp;
+		tmp = *lst;
+		free(tmp->content);
+		*lst = (*lst)->next;
+		free(tmp);
 	}
 	return (0);
 }
